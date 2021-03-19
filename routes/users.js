@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/download', function(req, res, next) {
   const file = './test.txt';
-  res.download(file);
+  res.download('./test.txt', 'test.txt');
 });
 
 module.exports = router;
