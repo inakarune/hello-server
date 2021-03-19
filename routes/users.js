@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/download', function(req, res, next) {
   const file = './test.txt';
+  res.setHeader('Content-type', 'application/octet-stream');
   res.download('./test.txt', 'test.txt');
 });
 
